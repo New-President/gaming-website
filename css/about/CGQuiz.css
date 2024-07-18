@@ -1,0 +1,205 @@
+﻿body {
+    margin: 0 2em;
+}
+
+header {
+    margin-bottom: 3em;
+}
+
+footer {
+    margin-top: 3em !important;
+}
+
+/*styles for scroll to top button*/
+#ue-scroll:hover {
+    filter: invert(100%);
+}
+
+#heading {
+    text-align: center;
+}
+
+#CGQuiz {
+    border-style: solid;
+    border-color: black;
+    border-width: 0.3em;
+    border-radius: 3em;
+    padding: 3em;
+    
+}
+
+fieldset {
+    border-style: inset;
+    border-width: 2px;
+    padding: 1em;
+}
+
+fieldset legend {
+    font-size: 2em;
+    width: fit-content;
+    font-style: italic;
+    text-decoration: underline;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.qnBlock {
+    margin-bottom: 1em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+}
+
+.qn {
+    font-size: 1.2em;
+}
+
+.choices {
+    margin-left: 3em;
+    margin-bottom: 1em;
+}
+
+.choices label {
+    display: inline;
+    margin-left: 0.2em;
+    margin-right: 2em;
+}
+
+/*styles for displaying answers*/
+.styleAns {
+    background-color: white;
+}
+
+.ans {
+    display: block;
+    width: 100px;
+    height: 45px;
+}
+
+.hidden {
+    display: none;
+}
+
+.trapdoor {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    box-shadow: inset -7px 0px 12px -8px rgba(0, 0, 0, 0.3), inset 7px 0px 12px -8px rgba(0, 0, 0, 0.3);
+    transition: background 400ms ease-in-out;
+}
+
+.trapdoor:hover .door {
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.4);
+    transform: scale(1.08);
+}
+
+.trapdoor:hover .top {
+    top: -50%;
+}
+
+.trapdoor:hover .bottom {
+    top: 100%;
+}
+
+.top {
+    top: 0%;
+    left: 0px;
+}
+
+.top:before {
+    top: 5px;
+}
+
+.bottom {
+    top: 50%;
+    left: 0px;
+}
+
+.bottom:before {
+    top: -15px;
+}
+
+.door {
+    transition: top 400ms, box-shadow 200ms, transform 300ms;
+    transition-timing-function: ease-in-out;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    height: 50%;
+}
+
+.door:before {
+    box-sizing: border-box;
+    position: relative;
+    font-size: 20px;
+    display: block;
+    color: black;
+    content: "Answer";
+    text-decoration: underline;
+    height: 15px;
+    padding-left: 20%;
+}
+
+.ansContent p {
+    text-align: center;
+    margin: 7% 0 0 0;
+}
+
+/*animation for showing total score*/
+.total {
+    width: 100%;
+}
+
+.toggle {
+    margin: auto;
+    border: none;
+    padding: 10px 44px;
+    font-size: 20px;
+    position: relative;
+    background: none;
+    width: 80%;
+    border-radius: 50px;
+}
+
+.toggle.green::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: "Hover Me!";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    width: 25%;
+    box-sizing: border-box;
+    padding-top: 5%;
+    padding-left: 7%;
+    background-color: lightgreen;
+}
+
+.toggle.red::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: "Hover Me!";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    width: 25%;
+    box-sizing: border-box;
+    padding-top: 5%;
+    padding-left: 7%;
+    background-color: palevioletred;
+}
+
+.toggle .totalText {
+    color: white;
+    mix-blend-mode: screen;
+    text-align: center;
+}
+
+.toggle:hover::before {
+    width: 100%;
+}
+
+/*reference: https://www.sliderrevolution.com/resources/css-button-hover-effects/ */

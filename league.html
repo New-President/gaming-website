@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Lim Long Teck" />
+    <meta name="description" content="League of Leagends" />
+    <title>League of Legends</title>
+    <link rel="icon" type="image/x-icon" href="media/league/League.jpg" />
+
+    <link rel="stylesheet" href="css/league/league.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/league/leagueScript.js" defer></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div w3-include-html="header.html"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12" id="navbuttons">
+                <a class="navigation" href="#About">About</a>
+                <a class="navigation" href="#Lores">Lores</a>
+                <a class="navigation" href="#Drop Rates">Drop Rates</a>
+                <a class="navigation" href="#FreeSkin">Free Skins!!!</a>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row" id="fade-in">
+            <div class="col-sm-12">
+                <video class="d-none d-md-block" loop="loop" preload="none" muted="muted" autoplay="autoplay" id="About">
+                    <source src="media/league/JinxGuma.mp4" type="video/mp4" />
+                    Your browser does not support the video element.
+                </video>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row tag">
+            <div class="col-sm-6" id="about">
+                <div>
+                    <h2 style="font-weight: bold">About</h2>
+                    <p id="aboutdescription">
+                        League of Legends, commonly referred to as League, is a Multiplayer Online Battle Arena(MOBA) video game developed and published by Riot Games in 2009. The game is free-to-play on Microsoft Windows and macOS. The game is monetized through purchasable character customization. Fortunately, the game also gives out many free character customization during certain events.
+                        <br />View the loot drop rates <a style="font-weight: bold" href="#Drop Rates">here</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-6" id="howtoplay">
+                <div>
+                    <h2 style="font-weight: bold">How to Play</h2>
+                    <div id="howtoplaydescription">
+                        Two teams of five players battle in player versus player combat. There are many game-modes in League such as <p style="font-weight: bold">All Random All Mid(ARAM), Ultra Rapid Fire(URF), Teamfight Tatics(TFT), and many more...</p>
+                        The objective of most game-mode is the same, which is to win by pushing through the enemy base and destroying their 'Nexus', a large strucutre located within.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr id="Lores" />
+        <br />
+
+
+        <div class="row tag">
+            <div class="col-sm-12">
+                <div class="carousel slide carousel-fade" id="featured" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#featured" data-slide-to="0"></li>
+                        <li data-target="#featured" data-slide-to="1"></li>
+                        <li data-target="#featured" data-slide-to="2"></li>
+                        <li data-target="#featured" data-slide-to="3"></li>
+                        <li data-target="#featured" data-slide-to="4" class="active"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img id="carousel-img" class="img-fluid" src="media/league/demacia.jpg" alt="Demaica" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Demacia</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img id="carousel-img" class="img-fluid" src="media/league/noxus.jpg" alt="Noxus" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Noxus</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img id="carousel-img" class="img-fluid" src="media/league/freljord.jpg" alt="Freljord" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Freljord</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img id="carousel-img" class="img-fluid" src="media/league/ionia.jpg" alt="Ionia" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Ionia</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item active">
+                            <img id="carousel-img" class="img-fluid" src="media/league/piltover.jpg" alt="Piltover" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Piltover</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a id="bootstrap-overrides-prev" class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </a>
+                    <a id="bootstrap-overrides-next" class="carousel-control-next" href="#featured" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row tag">
+            <div class="col-sm-12">
+                <p id="blackbackground">There are over 140 champions for you to try out in game and each champion also comes from one of the 13 regions in League's universe. Each champion have different abilities and unique styles of play.</p>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <hr id="Drop Rates" />
+        <br />
+
+        <div class="row tag">
+            <div class="col-sm-12">
+                <p id="greenbackground">Along the way as you play the game, you would be able to recieve free character customization, skins/skin shards. Below are the drop rates of the loot for the Masterwork chest and Orb which is obtainable through events.</p>
+            </div>
+        </div>
+
+        <div class="row tag">
+            <div class="col-sm-6">
+                <table>
+                    <caption id="bootstrap-overrides">Masterwork Chest</caption>
+                    <tr>
+                        <th>Loot</th>
+                        <th>Drop Rates</th>
+                    </tr>
+                    <tr>
+                        <td id="green">Skin shard or Ultimate skin permanent</td>
+                        <td id="green">70%</td>
+                    </tr>
+                    <tr>
+                        <td id="blue">Emote</td>
+                        <td id="red">10%</td>
+                    </tr>
+                    <tr>
+                        <td id="orange">Orange Essence</td>
+                        <td id="red">10%</td>
+                    </tr>
+                    <tr>
+                        <td id="yellow">Ward skin shard</td>
+                        <td id="red">10%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-sm-6">
+                <table>
+                    <caption id="bootstrap-overrides">Orbs</caption>
+                    <tr>
+                        <td colspan="2" id="orbdetail">Orbs drop Random Skin Shards but there are chances of it containing:</td>
+                    </tr>
+                    <tr>
+                        <th>Loot</th>
+                        <th>Drop Rates</th>
+                    </tr>
+                    <tr>
+                        <td id="purple">Mythic Gemstone</td>
+                        <td id="green">4.11%</td>
+                    </tr>
+                    <tr>
+                        <td id="bag">Clutch bag (4 - 5 skin shards)</td>
+                        <td id="orange">3.5%</td>
+                    </tr>
+                    <tr>
+                        <td id="mythic">Mythic Skin Permanent</td>
+                        <td id="red">0.05%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br />
+
+        <br />
+        <br />
+        <br />
+        <hr id="FreeSkin" />
+        <br />
+
+
+        <div class="row tag">
+            <div class="col-sm-6">
+                <form id="giftForm" onsubmit="submitForm(); return false">
+                    <h1 style="text-align: center">Gifting Form</h1>
+                    <p>
+                        <label>Username:</label>
+                        <input id="Name" placeholder="Enter your username"  />
+                        <label>Email:</label>
+                        <input id="email" type="email" placeholder="Enter your email" required/>
+                    </p>
+
+                    <p>
+                        <fieldset name="Skin" id="bootstrap-overrides-fieldset" onchange="displaySkin()">
+                            <legend id="bootstrap-overrides-legend">Choose Skin:</legend>
+                            <input type="radio" id="Skin" name="Skin" value="lux" required/> Elementalist Lux <br />
+                            <input type="radio" id="Skin" name="Skin" value="sona" /> DJ Sona <br />
+                            <input type="radio" id="Skin" name="Skin" value="mf" /> Gun Goddess Miss Fortune <br />
+                            <input type="radio" id="Skin" name="Skin" value="seraphine" /> K/DA All Out Seraphine <br />
+                            <input type="radio" id="Skin" name="Skin" value="ezreal" /> Pulsefire Ezreal <br />
+                            <input type="radio" id="Skin" name="Skin" value="udyr" /> Spirit Guard Udyr <br />
+                        </fieldset>
+                    </p>
+
+                    <p>
+                        <input type="submit" />
+                        <input type="reset" onclick="resetForm()" />
+                    </p>
+                    <p id="finalMessage"></p>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <p id="displaySkin"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div w3-include-html="footer.html"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+﻿body {
+    font-family: 'Gill Sans', Helvetica, sans-serif;
+    margin: 0 auto;
+    background-image: url(../../media/league/wallpaper.png), url(../../media/league/yasuo.jpg);
+    background-position: top, bottom;
+    background-size: 100% 600px, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+
+    .tag.visible {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+#fade-in {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#navbuttons {
+    background-size: cover;
+    text-align: center;
+    border: 1px solid black;
+    background-color: white;
+    opacity: 0.8;
+    padding: 7px;
+}
+
+.navigation{
+    font-size: 20px;
+    margin-right: 10px;
+    color: black;
+}
+
+.navigation:hover {
+    border: 10px thin black;
+    padding: 5px;
+    color: crimson;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For desktop: */
+    .navigation {
+        font-size: 23px;
+        margin: 10px;
+        color: black;
+    }
+    .navigation:hover {
+        border: 10px thin black;
+        padding: 5px;
+        color: crimson;
+        background-color: lightblue;
+        border-radius: 5px;
+    }
+}
+
+
+video {
+    max-width: 848px;
+    max-height: 650px;
+    padding-right: 50px;
+    display: block;
+    margin: auto;
+}
+
+#howtoplay, #about {
+    padding-top: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+    opacity: 0.95;
+    padding-bottom: 15px;
+}
+
+#aboutdescription{
+    padding: 52px;
+    background-color: paleturquoise;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#howtoplaydescription {
+    padding: 35px;
+    background-color: paleturquoise;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.carousel-inner img {
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.carousel-control-prev {
+    left: 5%;
+}
+
+#bootstrap-overrides-prev{
+    left: 50px;
+}
+
+.carousel-control-next {
+    right: 5%;
+}
+
+#carousel-img {
+    width: 800px;
+    height: 500px;
+}
+
+#blackbackground{
+    background-color: black;
+    opacity: 0.8;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+#greenbackground {
+    background-color: paleturquoise;
+    opacity: 0.95;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: white;
+    opacity: 0.89;
+}
+
+caption{
+    text-decoration: underline;
+    background-color: antiquewhite;
+}
+
+
+#bootstrap-overrides, caption {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    caption-side: top;
+}
+
+tr, th, td {
+    border: thin solid black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#orbdetail{
+    font-weight: bold;
+}
+
+#green {
+    color: green;
+}
+
+#orange {
+    color: darkorange;
+}
+
+#red {
+    color: red;
+}
+
+#purple{
+    color: rebeccapurple;
+}
+
+#bag{
+    color: Highlight;
+}
+
+#mythic {
+    color: mediumorchid;
+}
+
+#blue{
+    color: dodgerblue;
+}
+
+#yellow{
+    color: gold;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    border: 10px solid olive;
+    background-color: white;
+    opacity: 0.89;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-left: 20px;
+}
+
+#bootstrap-overrides-fieldset, fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: ThreeDFace;
+    border-image: initial;
+}
+
+#bootstrap-overrides-legend, legend {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    width: auto;
+    max-width: 100%;
+}
+
+#finalMessage{
+    color: red;
+}
+
+#displaySkin img{
+    width: 400px;
+    height: 200px;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For desktop: */
+    #displaySkin img {
+        margin-left: 100px;
+        width: 500px;
+        height: 350px;
+    }
+}

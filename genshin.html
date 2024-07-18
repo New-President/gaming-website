@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Lee Wee Kang" />
+    <meta name="description" content="Wee Kang - Geshin Impact" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact Webpage</title>
+    <link rel="icon" type="image/x-icon" href="media/genshin/paimon.jpg" />
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/genshin/genshinImpact.css" rel="stylesheet" />
+    <script src="js/genshin/genshinScript.js" defer></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <audio id="bgm" autoplay="autoplay" src="media/genshin/bgm.mp3" loop="loop"></audio>
+    <div class="container-fluid">
+        <section id="start">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div w3-include-html="header.html"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="genshinHeader">
+                        <div class="imgcontainer">
+                            <img id="genshinLogo" src="../media/genshin/genshinMainLogo.png" title="Genshin Impact Logo" alt="Genshin Impact Logo" />
+                        </div>
+                        <h1>The Wonders of Genshin Impact!</h1>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-12" id="navbuttons">
+                    <a class="navigation" href="#genshinIntro">Learn More!</a>
+                    <a class="navigation" href="#ingame-screenshots">In-game Screenshots</a>
+                    <a class="navigation" href="#favCharForm">Popularity Contest</a>
+                    <a class="navigation" href="#genshinLogo2">Register Now</a>
+                </div>
+            </div>
+
+        </section>
+        <section class="seperator">
+        </section>
+        <section class="blackSection reveal">
+            <div class="row" id="genshinIntro">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <h2 class="aboutGenshinHeader">About Genshin Impact</h2>
+                    <p class="aboutGenshinDescr">Genshin Impact is the top 10 most played action/role-playing mobile games developed by a company based in China named as MiHoYo. Genshin Impact is also available on PC as well as PS4/PS5!</p>
+                    <p class="aboutGenshinDescr">There are many exciting characters for you to obtain and play with in a team of four of your own composition. This action packed game surely does not miss a beat!</p>
+                    <p class="aboutGenshinDescr">
+                        With 4 large regions for you to explore, players can expect a riveting storyline packed with lores and many hours of gameplay
+                        accompanied by fantastic soundtracks that immerses you in the environment! <a href="https://www.youtube.com/watch?v=pFrKZxStL_U" id="musiclink" target="_blank">Check out their amazing band!</a>
+                    </p>
+                    <div class="container" id="soundtrack">
+                        <p>Here's a preview of Genshin's soundtrack!</p>
+                        <audio controls id="genshinaudio" onplay="mutebgm()" onpause="playbgm()">
+                            <source src="media/genshin/soundtrack.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <p class="aboutGenshinDescr">Impressive soundtracks aside, knowledge of the elements is paramount when tackling Genshin's unique style of gameplay.</p>
+                    <p id="tablebuttons">
+                        <button id="showtable">Show Table</button>
+                        <button class="hidetable">Hide Table</button>
+                    </p>
+                </div>
+                <div class="col-sm-5">
+                    <img class="slide-in" src="media/genshin/paimon.jpg" id="paimon" title="emergency food" alt="paimon.jpg" />
+                </div>
+                <div class="rcontain">
+                    <div id="reactionTable">
+                        <div>
+                            <h4 id="tableh4">In Genshin Impact, obtainable character are special 'vision' bearers which allows control of an element</h4>
+                            <br />
+                            <h5 id="tableh5">Here is a table which describes what happens when certain elements are used together.</h5>
+                            <br />
+                            <table>
+                                <caption>Information on Element Combinations<p>*Buffs occur when there are two of the same elements in a team*</p></caption>
+                                <tr>
+                                    <th style="text-align:center; background-color: black; font-size: 1rem">Element Dealer ></th>
+                                    <th class="tableHeader" id="anemo">Anemo</th>
+                                    <th class="tableHeader" id="fire">Pyro</th>
+                                    <th class="tableHeader" id="cryo">Cryo</th>
+                                    <th class="tableHeader" id="electro">Electro</th>
+                                    <th class="tableHeader" id="hydro">Hydro</th>
+                                    <th class="tableHeader" id="geo">Geo</th>
+                                </tr>
+                                <tr>
+                                    <th class="tableRow" id="anemo">Anemo</th>
+                                    <td><p>Stamina Consumption -15%</p><p>Movement Speed +10%</p></td>
+                                    <td>Swirl</td>
+                                    <td>Swirl</td>
+                                    <td>Swirl</td>
+                                    <td>Swirl</td>
+                                    <td>Crystalize</td>
+                                </tr>
+                                <tr>
+                                    <th class="tableRow" id="fire">Pyro</th>
+                                    <td>Swirl</td>
+                                    <td><p>Attack Damage +25%</p><p>Cryo Affected Time -40%</p></td>
+                                    <td>Melt</td>
+                                    <td>Overload</td>
+                                    <td>Vaporise</td>
+                                    <td>Crystalize</td>
+                                </tr>
+                                <tr>
+                                    <th class="tableRow" id="cryo">Cryo</th>
+                                    <td>Swirl</td>
+                                    <td>Melt</td>
+                                    <td><p>Crit Rate against Frozen Enemies +15%</p><p>Electro Affected Time -40%</p></td>
+                                    <td>Superconduct</td>
+                                    <td>-</td>
+                                    <td>Crystalize</td>
+                                </tr>
+                                <tr>
+                                    <th class="tableRow" id="electro">Electro</th>
+                                    <td>Swirl</td>
+                                    <td>Overload</td>
+                                    <td>Superconduct</td>
+                                    <td><p>Element Particle Drop Rate +100%</p><p>Hydro Affected Time -40%</p></td>
+                                    <td>Electro-charged</td>
+                                    <td>Crystalize</td>
+                                </tr>
+                                <tr>
+                                    <th class="tableRow" id="hydro">Hydro</th>
+                                    <td>Swirl</td>
+                                    <td>Vaporise</td>
+                                    <td>Freeze</td>
+                                    <td>Electro-charged</td>
+                                    <td><p>Incoming Healing +30%</p><p>Pyro Affected Time -40%</p></td>
+                                    <td>Crystalize</td>
+                                </tr>
+                                <tr>
+                                    <th class="tableRow" id="geo">Geo</th>
+                                    <td>Swirl</td>
+                                    <td>Crystalize</td>
+                                    <td>Crystalize</td>
+                                    <td>Crystalize</td>
+                                    <td>Crystalize</td>
+                                    <td><p>Attack Damage +15% with Shield</p><p>Increased Resistance to Interuption</p></td>
+                                </tr>
+                            </table>
+                            <p id="tablebutton2">
+                                <button class="hidetable">Hide Table</button>
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="seperator">
+        </section>
+        <div class="row reveal">
+            <div class="transparent" id="ingame-screenshots">
+                <div class="col-12">
+                    <h1 id="gallery-heading">In-game screenshots</h1>
+                </div>
+                <section class="col-sm-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <!--data interval = false > no auto slide-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="media/genshin/in-gamescreenshot.jpg" alt="First slide">
+
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="media/genshin/in-gamescreenshot2.jpg" alt="Second slide">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="media/genshin/in-gamescreenshot3.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="media/genshin/in-gamescreenshot4.jpg" alt="Fourth slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section class="seperator">
+        </section>
+        <div class="row reveal contain" id="formSection">
+            <div class="col-sm-1 col-12"></div>
+            <div class="col-sm-4 col-12">
+                <iframe src="https://www.youtube.com/embed/A4dWDvL4cw8" id="genshinTeaser" allow="fullscreen">
+                    Your browser does not support the iframe element.
+                </iframe>
+                <br />
+                <br />
+                <div style="display: flex; justify-content: center">
+                    <button onclick="mutebgm()">Mute BGM</button>
+                    <button onclick="playbgm()">Play BGM</button>
+                </div>
+            </div>
+            <div class="col-sm-7 col-12">
+                <form id="favCharForm" onsubmit="getUserCredentials() ;return false">
+                    <h1>Find out how popular your favourite character is!</h1>
+
+                    <fieldset>
+                        <legend>Your Choice</legend>
+                        <label for="favchar">Favourite: </label>
+                        <select id="favchar" required>
+                            <option value="">Select your favourite five star character!</option>
+                            <option value="Traveller">Traveller (Geo/Anemo)</option>
+                            <option value="Diluc">Diluc (Pyro)</option>
+                            <option value="Jean">Jean (Anemo)</option>
+                            <option value="Venti">Venti (Anemo)</option>
+                            <option value="Mona">Mona (Hydro)</option>
+                            <option value="Klee">Klee (Pyro)</option>
+                            <option value="Eula">Eula (Cyro)</option>
+                            <option value="Albedo">Albedo (Geo)</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Login</legend>
+                        <p>
+                            <label for="username">Username: </label>
+                            <input class="input" type="text" placeholder="Enter your username" id="username" required />
+                        </p>
+                        <p>
+                            <label for="userpass">Password: </label>
+                            <input class="input" type="password" placeholder="Enter your password" id="userpass" required />
+                        </p>
+                        <p>
+                            <label for="useremail">Email: </label>
+                            <input id="useremail" type="email" placeholder="Enter your email" size="35" required />
+                            <input type="button" id="getCode" onclick="randomCode()" value="Get code">
+                        </p>
+                        <p>
+                            <label for="vcode">Verification: </label>
+                            <input id="vcode" type="text" placeholder="Enter verification code" required />
+                        <p id="errorMsg"></p>
+                        <div id="blackBox">
+                            <p id="finalMsg" class="rainbow rainbow_text_animated"></p>
+                        </div>
+
+                        <br />
+                        <p>
+                        <p>
+                            <input type="submit" id="submitbutton" class="live" style="margin-right: 30px" />
+                            <input type="reset" class="live" onclick="onReset()" />
+                        </p>
+
+                    </fieldset>
+
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <p id="result"></p>
+            </div>
+            <div class="col-sm-6"><h2 id="leaderboard"></h2></div>
+        </div>
+
+
+        <section class="seperator">
+        </section>
+
+        <div class="row reveal">
+            <div class="col-sm-12">
+                <section class="blackSection">
+                    <h2>Register now if you haven't!</h2>
+                    <div class="imgcontainer">
+                        <img id="genshinLogo2" src="../media/genshin/genshinLogo2.png" title="Genshin Impact Logo" alt="Genshin Impact Logo" />
+                    </div>
+                    <iframe src="https://genshin.mihoyo.com/pc-launcher/?utm_source=SEA_google_AUSG_SEM_brand_1022&mhy_trace_channel=ga_channel&new=1&gclid=EAIaIQobChMIntGq8ue99QIVsSCtBh3dMAzaEAAYASAAEgL9LfD_BwE#/" id="registerNowframe" scrolling="yes" overflow: scroll allowtransparency="true">
+                        Your browser does not support the iframe element.
+                    </iframe>
+
+                    <br />
+                </section>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div w3-include-html="footer.html"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

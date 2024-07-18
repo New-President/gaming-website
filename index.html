@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Group 2" />
+    <meta name="description" content="FED Assignment Cyber Gaming" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cyber Gaming Homepage</title>
+    <link rel="icon" href="media/homepage-favicon.png" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/homepage.css" rel="stylesheet" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="js/index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <video autoplay muted loop id="myVideo">
+            <source src="media/homebg.mp4" type="video/mp4" />
+        </video>
+        <div class="row">
+            <div class="col-sm-12">
+                <div w3-include-html="header.html"></div>
+            </div>
+        </div>
+        <div class="row" id="columns">
+            <div class="col-sm-3">
+                <div class="infoColumn" id="aboutCGCol">
+                    <div class="contain">
+                        <h3>About Cybergaming</h3>
+                        <a class="learnMore" href="AboutCyberGaming.html">Learn More!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="infoColumn" id="genshinCol">
+                    <div class="contain">
+                        <h3>Genshin Impact</h3>
+                        <a class="learnMore" href="genshin.html">Learn More!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="infoColumn" id="csgoCol">
+                    <div class="contain">
+                        <h3>CS:GO</h3>
+                        <a class="learnMore" href="CSGO.html">Learn More!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="infoColumn" id="lolCol">
+                    <div class="contain">
+                        <h3 id="leagueheader">League of Legends</h3>
+                        <a class="learnMore" href="league.html">Learn More!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="footer" w3-include-html="footer.html"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

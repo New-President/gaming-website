@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Keefe Cheong Wenkai" />
+    <meta name="description" content="Quiz on Cyber Gaming" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Time: Cyber Gaming</title>
+    <link rel="icon" href="media/about/quiz-favicon.png" />
+    <!-- https://www.clipartmax.com/download/m2i8A0G6G6m2d3A0_quiz-icon-quiz-icon/ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link href="css/about/CGQuiz.css" rel="stylesheet" />
+    <script src="js/about/CGQuiz.js" defer></script>
+    <link href="css/ue-scroll.min.css" rel="stylesheet" />
+    <script src="js/ue-scroll.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div w3-include-html="header.html"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" id="heading">
+                <h1>Quiz Time!</h1>
+                <p>Take this short quiz comprising of 10 Multiple-Choice Questions to see how much you've learnt!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <form id="CGQuiz">
+                    <fieldset>
+                        <legend>Basics</legend>
+                        <div class="qnBlock" id="qn1">
+                            <label class="qn">Select games that are considered <em>cyber games</em>:</label>
+                            <br />
+                            <div class="choices">
+                                <input type="checkbox" name="classifyGames" value="0" id="classifyGamesPoker" />
+                                <label for="classifyGamesPoker">Poker</label>
+                                <br />
+                                <input type="checkbox" name="classifyGames" value="1" id="classifyGamesSolitaire" />
+                                <label for="classifyGamesSolitaire">Solitaire</label>
+                                <br />
+                                <input type="checkbox" name="classifyGames" value="2" id="classifyGamesLOL" />
+                                <label for="classifyGamesLOL">League of Legends</label>
+                                <br />
+                                <input type="checkbox" name="classifyGames" value="3" id="classifyGamesMc" />
+                                <label for="classifyGamesMc">Minecraft</label>
+                                <br />
+                                <input type="checkbox" name="classifyGames" value="4" id="classifyGamesPUBG" />
+                                <label for="classifyGamesPUBG">PUBG</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="qnBlock" id="qn2">
+                                <label class="qn">Why are <em>PEGI descriptors</em> not used anymore?</label>
+                                <br />
+                                <div class="choices">
+                                    <input type="radio" name="pegiReasons" value="0" id="pegiReason1" required />
+                                    <label for="pegiReason1">It is outdated.</label>
+                                    <br />
+                                    <input type="radio" name="pegiReasons" value="1" id="pegiReason2" />
+                                    <label for="pegiReason2">Online games have a different descriptor.</label>
+                                    <br />
+                                    <input type="radio" name="pegiReasons" value="2" id="pegiReason3" />
+                                    <label for="pegiReason3">Most modern games are online games.</label>
+                                    <br />
+                                    <input type="radio" name="pegiReasons" value="3" id="pegiReason4" />
+                                    <label for="pegiReason4">People do not read the descriptor.</label>
+                                </div>
+                                <div class="ans hidden">
+                                    <div class="trapdoor">
+                                        <div class="top door"></div>
+                                        <div class="bottom door"></div>
+                                        <div class="ansContent"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qnBlock" id="qn3">
+                                <label class="qn">In which year did cyber gaming become possible?</label>
+                                <br />
+                                <div class="choices">
+                                    <input type="radio" name="startYear" value="0" id="year1" required />
+                                    <label for="year1">1983</label>
+                                    <br />
+                                    <input type="radio" name="startYear" value="1" id="year2" />
+                                    <label for="year2">1993</label>
+                                    <br />
+                                    <input type="radio" name="startYear" value="2" id="year3" />
+                                    <label for="year3">2000</label>
+                                    <br />
+                                    <input type="radio" name="startYear" value="3" id="year4" />
+                                    <label for="year4">1977</label>
+                                </div>
+                                <div class="ans hidden">
+                                    <div class="trapdoor">
+                                        <div class="top door"></div>
+                                        <div class="bottom door"></div>
+                                        <div class="ansContent"></div>
+                                    </div>
+                                </div>
+                            </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Benefits & Risks</legend>
+                        <div class="qnBlock" id="qn4">
+                            <label class="qn">Gaming <em>does</em> provide benefits, if done in moderation.</label>
+                            <br />
+                            <div class="choices">
+                                <input type="radio" name="hasBenefits" value="0" id="benefitTrue" required />
+                                <label for="benefitTrue">True</label>
+                                <br />
+                                <input type="radio" name="hasBenefits" value="1" id="benefitFalse" />
+                                <label for="benefitFalse">False</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qnBlock" id="qn5">
+                            <label class="qn">What are some <em>benefits</em> of gaming, if any?</label>
+                            <br />
+                            <div class="choices">
+                                <input type="checkbox" name="gamingBenefits" value="0" id="benefit1" />
+                                <label for="benefit1">Higher IQ</label>
+                                <br />
+                                <input type="checkbox" name="gamingBenefits" value="1" id="benefit2" />
+                                <label for="benefit2">Better eyesight</label>
+                                <br />
+                                <input type="checkbox" name="gamingBenefits" value="2" id="benefit3" />
+                                <label for="benefit3">Better multitasking abilities</label>
+                                <br />
+                                <input type="checkbox" name="gamingBenefits" value="3" id="benefit4" />
+                                <label for="benefit4">Less stress</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qnBlock" id="qn6">
+                            <label class="qn">How does gaming make an individual a <em>team player</em>?</label>
+                            <br />
+                            <div class="choices">
+                                <input type="radio" name="teamworkBuilder" value="0" id="tpReason1" required />
+                                <label for="tpReason1">Players need to work with others to win.</label>
+                                <br />
+                                <input type="radio" name="teamworkBuilder" value="1" id="tpReason2" />
+                                <label for="tpReason2">You get to interact with other players in games.</label>
+                                <br />
+                                <input type="radio" name="teamworkBuilder" value="2" id="tpReason3" />
+                                <label for="tpReason3">It doesn't.</label>
+                                <br />
+                                <input type="radio" name="teamworkBuilder" value="3" id="tpReason4" />
+                                <label for="tpReason4">You can make online friends in games.</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qnBlock" id="qn7">
+                            <label class="qn">Gaming will cause eyesight to <em>deteriorate</em> no matter what.</label>
+                            <br />
+                            <div class="choices">
+                                <p>A. True.</p>
+                                <p>B. False. It will always improve vision.</p>
+                                <p>C. False. This occurs only if there is too much screen time.</p>
+                                <p>D. False. This occurs only if an individual has poor posture.</p>
+                                <br />
+                                <input type="radio" name="poorEyesight" value="0" id="poorEyesightA" required />
+                                <label for="poorEyesightA">A only.</label>
+                                <br />
+                                <input type="radio" name="poorEyesight" value="1" id="poorEyesightB" />
+                                <label for="poorEyesightB">B only.</label>
+                                <br />
+                                <input type="radio" name="poorEyesight" value="2" id="poorEyesightC" />
+                                <label for="poorEyesightC">C only.</label>
+                                <br />
+                                <input type="radio" name="poorEyesight" value="3" id="poorEyesightCD" />
+                                <label for="poorEyesightCD">C and D only.</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qnBlock" id="qn8">
+                            <label class="qn">All gamers will get addicted to gaming.</label>
+                            <br />
+                            <div class="choices">
+                                <input type="radio" name="addiction" value="0" id="addictionA" required />
+                                <label for="addictionA">True. Addiction affects everyone who plays games.</label>
+                                <br />
+                                <input type="radio" name="addiction" value="1" id="addictionB" />
+                                <label for="addictionB">False. Only people who game excessively will face addiction.</label>
+                                <br />
+                                <input type="radio" name="addiction" value="2" id="addictionC" />
+                                <label for="addictionC">False. There is no such thing as addiction for gaming.</label>
+                                <br />
+                                <input type="radio" name="addiction" value="3" id="addictionD" />
+                                <label for="addictionD">False. Only people who are unlucky will get addicted.</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Healthy Gaming Habits</legend>
+                        <div class="qnBlock" id="qn9">
+                            <label class="qn">If you play with family and friends, there will be no disadvantages of gaming at all.</label>
+                            <br />
+                            <div class="choices">
+                                <input type="radio" name="noDisadv" value="0" id="noDisadv1" required />
+                                <label for="noDisadv1">True. It will not cause any harm at all.</label>
+                                <br />
+                                <input type="radio" name="noDisadv" value="1" id="noDisadv2" />
+                                <label for="noDisadv2">False. Excessive gaming will still result in all possible risks.</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qnBlock" id="qn10">
+                            <label class="qn">Taking regular breaks while gaming will help mitigate potential damage caused.</label>
+                            <br />
+                            <div class="choices">
+                                <input type="radio" name="takeBreaks" value="0" id="takeBreaksA" required />
+                                <label for="takeBreaksA">True. It will reduce the risks of injury from strain as well as prolonged sitting.</label>
+                                <br />
+                                <input type="radio" name="takeBreaks" value="1" id="takeBreaksB" />
+                                <label for="takeBreaksB">False. It will do more harm as you waste more energy moving around.</label>
+                            </div>
+                            <div class="ans hidden">
+                                <div class="trapdoor">
+                                    <div class="top door"></div>
+                                    <div class="bottom door"></div>
+                                    <div class="ansContent"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br />
+                    <div class="total">
+                        <div class="toggle">
+                            <div class="totalText"></div>
+                        </div>
+                    </div>
+                    <br />
+                    <input type="submit" id="submit" />
+                    <input type="reset" id="reset" />
+                </form>
+            </div>
+        </div>
+
+        <div id="ue-scroll" class="ue-scroll btn-black arrow-white circle"></div>
+        <script>
+            UeScroll.init();
+        </script>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div w3-include-html="footer.html"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        w3.includeHTML();
+    </script>
+
+</body>
+
+</html>

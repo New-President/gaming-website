@@ -1,0 +1,55 @@
+﻿body {
+    background: linear-gradient(#e66465, #9198e5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Dosis', sans-serif !important;
+}
+
+.container-fluid {
+    padding: 0 3em;
+    position: relative;
+}
+
+.row {
+    margin-bottom: 2rem;
+}
+
+#footerRow {
+    position: relative;
+    bottom: 0;
+    margin: 0;
+}
+
+h1, h2{
+    text-decoration: underline;
+    text-align:center;
+}
+
+h3 {
+    text-align: center;
+}
+p {
+    border-radius: 10px;
+    background-color: rgb(255,255,255, 50%);
+    padding: 0.5em;
+    text-align: center;
+    word-wrap: break-word !important;
+}
+
+.webpages {
+    margin-left: 50%;
+    width: fit-content;
+}
+
+#references p {
+    background-color: unset;
+    text-align: unset;
+    text-decoration: underline;
+}
+
+.contain{
+    padding: 50px;
+    margin: 50px;
+    border: 2px black solid;
+    border-radius: 10px;
+}

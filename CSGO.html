@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Yong Zi Ren" />
+    <meta name="description" content="CSGO Page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/csgo/styleCSGO.css" />
+    <link rel="icon" type="image/x-icon" href="media/csgo/csgologo.ico" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="js/csgo/CSGOScript.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+    </style>
+    <title>Cyber Gaming CS:GO Page</title>
+</head>
+<body id="body" onclick="soundEffect()" onmouseover="bgSound()">
+    <div class="container-fluid">
+        <!-- 1st row - Header -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div w3-include-html="header.html"></div>
+            </div>
+        </div>
+
+        <!--Introduction-->
+        <div class="row" style="border-top: 200px solid transparent; width: 90%; margin: auto;">
+            <div class="col-sm-6" style="color: black; max-width: 45%; margin-left: 10%;">
+                <h1 id="info">About CS:GO</h1>
+                <p style="font-weight: 500;">Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.</p>
+                <p style="font-weight: 500;">CS:GO features new maps, characters, and weapons and delivers updated versions of the classic Counter-Strike maps like Dust, Inferno, Nuke, Train, and more. In addition, CS:GO introduces new game modes like Arms Race, Flying Scoutsman and Wingman, and features online matchmaking and Competitive Skill Groups.</p>
+                <p style="font-weight: 500;">Click <a href="https://blog.counter-strike.net/index.php/about/">HERE</a> for more information on the official website!</p>
+            </div>
+            <div class="col-sm-6" style="color: black; max-width: 45%;">
+                <h1 id="info">Main Features</h1>
+                <ul style="margin-left: 80px; font-weight: 500;">
+                    <li><p style="margin-bottom: 10px;">First Person Shooter Game</p></li>
+                    <li><p style="margin-bottom: 10px;">Multiple Game Modes</p></li>
+                    <li><p style="margin-bottom: 10px;">5v5</p></li>
+                    <li><p style="margin-bottom: 10px;">Marketplace to sell in-game skins for STEAM currency</p></li>
+                    <li><p style="margin-bottom: 10px;">Loot Boxes</p></li>
+                    <li><p style="margin-bottom: 10px;">Recognised as an esport game</p></li>
+                </ul>
+            </div>
+        </div>
+        <h1 id="info" style="text-align: center; font-size: 70px;">Game Modes</h1>
+        <!--Game Mode-->
+        <div class="row" style="width: 90%; margin: auto;">
+            <div class="col-sm-2">
+                <h4 id="h4" class="compOption" onclick="mouseStatus1(true)">Competitive</h4>
+                <p>
+                    <h4 id="h4" class="wingmanOption" onclick="mouseStatus2(true)">Wingman</h4>
+                <p>
+                    <h4 id="h4" class="casualOption" onclick="mouseStatus3(true)">Casual</h4>
+                <p>
+                    <h4 id="h4" class="dmOption" onclick="mouseStatus4(true)">Deathmatch</h4>
+            </div>
+            <div class="col-sm-8" style="color: black;">
+                <h1 id="hide1"></h1>
+                <p id="hide12"></p>
+            </div>
+            <div class="col-sm-2">
+                <h4 id="h4" class="armraceOption" onclick="mouseStatus5(true)">Arms Race</h4>
+                <p>
+                    <h4 id="h4" class="demolitionOption" onclick="mouseStatus6(true)">Demolition</h4>
+                <p>
+                    <h4 id="h4" class="flyingOption" onclick="mouseStatus7(true)">Flying Scoutsman</h4>
+                <p>
+                    <h4 id="h4" class="dangerzoneOption" onclick="mouseStatus8(true)">Danger Zone</h4>
+            </div>
+        </div>
+
+        <div class="row" style=" width: 90%; margin: auto;">
+            <div class="col-sm-12">
+                <h1 class="headerlucky" style="font-size: 70px;">Gameplay</h1>
+                <center>
+                    <video controls autoplay loop muted id="gameplay">
+                        <source src="media/csgo/gameplay.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </center>
+            </div>
+        </div>
+
+        <!--Lucky Draw-->
+        <div class="row" style=" width: 90%; margin: auto;">
+            <div class="col-sm-6">
+                <h1 class="headerlucky">Drop Rate</h1>
+                <table id="success">
+                    <tr style="border-top: 10px solid black; border-left: 10px solid black; border-right: 10px solid black;">
+                        <th>Rarity</th>
+                        <th>Actual Rates</th>
+                        <th>Our Rates</th>
+                    </tr>
+                    <tr style="border-left: 10px solid black; border-right: 10px solid black;">
+                        <th style="color: yellow;">Yellow</th>
+                        <td>0.26%</td>
+                        <td>12.5%</td>
+                    </tr>
+                    <tr style="border-left: 10px solid black; border-right: 10px solid black;">
+                        <th style="color: red;">Red</th>
+                        <td>0.64%</td>
+                        <td>12.5%</td>
+                    </tr>
+                    <tr style="border-left: 10px solid black; border-right: 10px solid black;">
+                        <th style="color: hotpink;">Pink</th>
+                        <td>3.2%</td>
+                        <td>12.5%</td>
+                    </tr>
+                    <tr style="border-left: 10px solid black; border-right: 10px solid black;">
+                        <th style="color: rebeccapurple;">Purple</th>
+                        <td>15.98%</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr style="border-bottom: 10px solid black; border-left: 10px solid black; border-right: 10px solid black;">
+                        <th style="color: blue;">Blue</th>
+                        <td>79.92%</td>
+                        <td>37.5%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <h1 class="headerlucky">CS:GO Loot Box Draw</h1>
+                <div class="shanDeng" id="deng">
+                    <div id="luck">
+                        <table style="border-spacing:.08rem .03rem;">
+                            <tr>
+                                <td class="luck-unit luck-unit-0"><img src="media/csgo/blue-1.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                                <td class="luck-unit luck-unit-1"><img src="media/csgo/dark-blue-1.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                                <td class="luck-unit luck-unit-2"><img src="media/csgo/knife-lore.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                            </tr>
+                            <tr>
+                                <td class="luck-unit luck-unit-7"><img src="media/csgo/blue-2.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                                <td class="cjBtn" id="btn"></td>
+                                <td class="luck-unit luck-unit-3"><img src="media/csgo/red.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                            </tr>
+                            <tr>
+                                <td class="luck-unit luck-unit-6"><img src="media/csgo/pink.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                                <td class="luck-unit luck-unit-5"><img src="media/csgo/dark-blue-2.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                                <td class="luck-unit luck-unit-4"><img src="media/csgo/blue-3.png" style="width: 140px; height: 130px; border-radius: 15px;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <!--Form to get the account to send the rewards to-->
+        <div class="row" style="width: 90%; margin: auto; ">
+            <div class="col-sm-12">
+                <form onsubmit="showFinalMessage(); return false;" onreset="clearMessage()" class="rainbow">
+                    <h1 class="formheader">Reward Transfer</h1>
+                    <fieldset id="fieldset">
+                        <legend id="legend"><b>Account Detail</b></legend>
+                        <p>
+                            <label for="Username" id="label">Username:</label>
+                            <input type="text" id="Username" autocomplete="on" placeholder="Enter your username" required>
+                        </p>
+                        <p>
+                            <label for="Email" id="label">Email:</label>
+                            <input type="email" id="Email" placeholder="Enter email addresses" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" required>
+                        </p>
+                        <p>
+                            <label for="Password" id="label">Password:</label>
+                            <input type="password" id="Password" size="30" required />
+                        </p>
+                        <p>
+                            <label id="label">Is this a gift for someone?</label>
+                            <input type="radio" id="yes" name="gift" value="yes" onchange="checkGift()" required />
+                            Yes
+                            <input type="radio" id="no" name="gift" value="no" onchange="checkGift()" required />
+                            No
+                        </p>
+                        <label id="commentlabel"></label>
+                        <b id="comment"></b>
+                    </fieldset>
+                    <p></p>
+                    <fieldset id="fieldset">
+                        <legend id="legend"><b>Transfer Status</b></legend>
+                        <h2 class="status" id="status">Pending...</h2>
+                    </fieldset>
+                    <p></p>
+                    <input type="submit" value="submit" style="padding: 0 2px 0 2px;">
+                    <input type="reset" value="reset" style="padding: 0 2px 0 2px;">
+                    <p></p>
+                </form>
+                <br />
+            </div>
+        </div>
+
+        <!-- last row - Footer -->
+        <div class="row">
+            <div class="col-sm-12" style="padding: 0!important;">
+                <div w3-include-html="footer.html"></div>
+            </div>
+        </div>
+
+        <!--Script for lucky draw-->
+        <script defer>
+            var luck = {
+                index: 0,
+                count: 0,
+                timer: 0,
+                speed: 20,
+                times: 0,
+                cycle: 50,
+                prize: -1,
+                init: function (id) {
+                    if ($("#" + id).find(".luck-unit").length > 0) {
+                        $luck = $("#" + id);
+                        $units = $luck.find(".luck-unit");
+                        this.obj = $luck;
+                        this.count = $units.length;
+                        $luck.find(".luck-unit-" + this.index).addClass("active");
+                    };
+                },
+
+
+                roll: function () {
+                    var index = this.index;
+                    var count = this.count;
+                    var luck = this.obj;
+                    $(luck).find(".luck-unit-" + index).removeClass("active");
+                    index += 1;
+                    if (index > count - 1) {
+                        index = 0;
+                    };
+                    $(luck).find(".luck-unit-" + index).addClass("active");
+                    this.index = index;
+                    return false;
+                },
+                stop: function (index) {
+                    this.prize = index;
+                    return false;
+                }
+            };
+
+
+            function roll() {
+                luck.times += 1;
+                luck.roll();
+                if (luck.times > luck.cycle + 10 && luck.prize == luck.index) {
+                    clearTimeout(luck.timer);
+                    luck.prize = -1;
+                    luck.times = 0;
+                    click = false;
+                } else {
+                    if (luck.times < luck.cycle) {
+                        luck.speed -= 10;
+                    }
+                    else if (luck.times == luck.cycle) {
+                        var index = Math.random() * (luck.count) | 0;
+                        luck.prize = index;
+                    }
+                    else {
+                        if (luck.times > luck.cycle + 10 && ((luck.prize == 0 && luck.index == 7) || luck.prize == luck.index + 1)) {
+                            luck.speed += 110;
+                        } else {
+                            luck.speed += 20;
+                        }
+                    }
+                    if (luck.speed < 40) {
+                        luck.speed = 40;
+                    };
+
+                    luck.timer = setTimeout(roll, luck.speed);
+                }
+                return false;
+            }
+
+
+            var click = false;
+            window.onload = function () {
+                luck.init('luck');
+                $("#btn").click(function () {
+
+                    if (click) {
+                        return false;
+                    }
+                    else {
+                        luck.speed = 100;
+                        roll();
+                        click = true;
+                        return false;
+                    }
+
+                });
+            };
+        </script>
+    </div>
+
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

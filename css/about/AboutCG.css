@@ -1,0 +1,293 @@
+﻿/*general styles*/
+body {
+    margin: 0 2em;
+    background-color: lightgray;
+}
+
+/*header/footer styles*/
+header {
+    margin-bottom: 3em;
+}
+
+footer {
+    margin-top: 3em !important;
+}
+
+.container-fluid {
+    position: relative;
+    min-height: 100vh;
+}
+
+#footerRow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.tableOfContents {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 1em;
+    padding-right: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: fit-content;
+}
+
+/*styles for scroll to top button*/
+#ue-scroll:hover {
+    filter: invert(100%);
+}
+
+/*styles for nav menu*/
+#navMenu {
+    background-color: lightgray;
+}
+
+#navMenu li {
+    position: relative;
+}
+
+#navMenu a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0.2em;
+    background-color: steelblue;
+    left: 50%;
+    bottom: 0;
+    border-radius: 5px;
+}
+
+#navMenu li:hover a:hover::before {
+    width: 100%;
+    left: 0;
+    transition: 0.3s all;
+}
+
+#navMenu a {
+    transition: 0.3s;
+}
+
+#navMenu:hover a {
+    color: darkgray;
+}
+
+#navMenu:hover a:hover {
+    color: #007bff;
+}
+
+/*carousel styles (history)*/
+.carouselContent {
+    width: 75%;
+    height: fit-content;
+    color: white;
+    background-color: black;
+    padding: 1em;
+}
+
+.carousel-indicators {
+    filter: invert(100%);
+    position: relative;
+    bottom: -5vh;
+}
+
+.carousel-indicators li:hover {
+    filter: invert(100%);
+}
+
+/*styles to make carousel controls have flip animation*/
+.flip {
+    width: 10%;
+    height: 2em;
+    position: absolute;
+    perspective: 500px;
+    top: calc(50% - 2.5vh);
+}
+
+.flip a {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.flip a .front,
+.flip a .back {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10% 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.flip a .front {
+    background-color: black;
+    transform: rotateY(0) translateZ(24px);
+}
+
+.flip a .back {
+    background-color: rgba(255,255,255,0);
+    color: rgba(34,34,34,0);
+    transform: rotateX(90deg) translateZ(24px);
+    overflow: hidden;
+}
+
+.flip a .back:after {
+    content: '';
+    position: absolute;
+    top: -32%;
+    left: -10%;
+    width: 120%;
+    height: 50%;
+    background: #222;
+    transform: rotate(8deg);
+    transition: all 0.5s ease;
+    transition-delay: 0.15s;
+}
+
+.flip a:hover {
+    transform: translateZ(-24px) rotateX(-90deg);
+}
+
+.flip a:hover .front {
+    background: #000;
+    transition: all 0.8s ease;
+}
+
+.flip a:hover .back {
+    color: #222;
+    transition: color 0.4s linear;
+    background: #fff;
+}
+
+.flip a:hover .back:after {
+    transform: rotate(6deg) translate(100px, -18px);
+}
+/*reference: https://www.sliderrevolution.com/resources/css-button-hover-effects/ */
+
+/*table styles (benefits & risks)*/
+table {
+    text-align: center;
+}
+
+table td, table th {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 10px;
+    width: 50vw;
+}
+
+table th {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+table caption {
+    font-style:italic;
+}
+
+table .adv {
+    background-color: lightgreen;
+}
+
+table .disadv {
+    background-color: palevioletred;
+}
+
+/*styles for responsive media*/
+#iframeContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+#gamingBenefitsVid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*media styles*/
+.media {
+    display: none;
+}
+
+figcaption {
+    font-size: 0.5em;
+}
+
+/*media queries to display media content on large screens*/
+/*display link for videos on small screens*/
+@media screen and (min-width: 400px) {
+    .media {
+        display: block;
+    }
+    #vidLink {
+        display: none;
+    }
+}
+
+/*media queries for nav menu (breakpoint: 576px)*/
+@media screen and (max-width: 575px) {
+    /*style nav menu as fixed horizontal menu - to become sticky through js*/
+    .sideNav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        font-size: 10px;
+        border-bottom-style: solid;
+        border-bottom-color: darkgray;
+        border-bottom-width: 2px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    /*style nav menu as sticky vertical menu*/
+    .sideNav {
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+    }
+
+    /*add left padding to second column so there is space between the two columns*/
+    /*also add left border for separation between nav and content*/
+    .col-sm-9 {
+        padding-left: 3em;
+        border-left-style: solid;
+        border-left-color: darkgray;
+        border-left-width: 2px;
+    }
+
+    /*carousel styles*/
+    .carouselContent {
+        width: 80%;
+    }
+
+    .flip {
+        width: 5%;
+    }
+}
+

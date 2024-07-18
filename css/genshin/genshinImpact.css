@@ -1,0 +1,591 @@
+﻿@font-face {
+    font-family: genshinFont;
+    src: url('../../media/genshin/ja-jp.ttf') format('truetype');
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        overflow-x: scroll;
+    }
+
+    #genshinLogo {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    #navbuttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navigation {
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(255, 255, 255, 60%);
+        color: black;
+        text-decoration: none !important;
+        text-align:center;
+        box-shadow: 6px 5px 4px rgb(0, 0, 0, 30%);
+        margin-bottom: 15px;
+    }
+
+    .aboutGenshinHeader, .aboutGenshinDescr {
+        padding-left: 25px;
+        text-align: left    ;
+        color: rgb(255, 255, 255, 90%);
+    }
+
+    .aboutGenshinDescr {
+        font-size: 0.9rem;
+        margin-top: 30px;
+    }
+
+    #soundtrack {
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(255,255,255, 80%);
+    }
+
+    #paimon {
+        padding: 0;
+    }
+
+    #genshinTeaser{
+        display: none;
+    }
+
+    #tablebuttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    table {
+        margin: 0;
+    }
+
+    #reactionTable {
+        padding: 0 10px;
+        margin: auto;
+    }
+
+    .rcontain {
+        padding: 0;
+        overflow-x: scroll;
+    }
+    td, th {
+        border: 1px white solid;
+        text-align: center;
+    }
+    form {
+        color: black;
+    }
+    #registerNowframe {
+    }
+
+}
+
+
+@media only screen and (min-width: 800px) {
+
+
+    #genshinLogo {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 500px;
+    }
+
+    #navbuttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .navigation {
+        display: flex;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(255, 255, 255, 60%);
+        color: black;
+        margin-left: 50px;
+        margin-right: 50px;
+        text-decoration: none !important;
+        box-shadow: 6px 5px 4px rgb(0, 0, 0, 30%);
+    }
+    .aboutGenshinHeader, .aboutGenshinDescr {
+        text-align: right;
+        color: rgb(255, 255, 255, 90%);
+    }
+
+    .aboutGenshinDescr {
+        font-size: 0.9rem;
+        margin-top: 30px;
+    }
+    #soundtrack {
+        text-align: right;
+        text-decoration: underline;
+        color: rgb(255,255,255, 80%);
+    }
+    #paimon {
+        padding: 25px;
+    }
+
+    #tablebuttons {
+        display: flex;
+        justify-content: right;
+    }
+    table{
+        margin: auto;
+    }
+    #reactionTable {
+        padding: 20vh;
+        padding-top: 10vh;
+        padding-bottom: 0;
+    }
+
+    #genshinTeaser {
+        display: block;
+        position: absolute;
+        height: 65%;
+        width: 100%;
+        /* To center the iframe vertically*/
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+
+    .rcontain {
+        padding: 0 60px;
+    }
+    td, th {
+        border: 1px white solid;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    form {
+        margin: 0 25px;
+        padding: 50px;
+        color: black;
+    }
+    #registerNowframe {
+        width: 75%;
+    }
+}
+    
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 0;
+    background-image: url(../../media/genshin/skyWallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    overflow-x: hidden;
+    background-attachment: fixed; /*For blur effect*/
+}
+
+* {
+    font-family: genshinFont !important;
+    font-size: 15px;
+}
+
+/*fading animation*/
+.reveal {
+    position: relative;
+    transform: translateY(5px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/*.slide-in {
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translateX(30%) scale(0.95);
+}
+
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}*/
+
+
+.seperator {
+    height: 30vh;
+    background-color: rgb(255,255, 255, 10%);
+}
+
+
+
+.navigation:hover {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 60%);
+    color: black;
+    margin-right: 50px;
+    animation: pulse 1500ms infinite;
+}
+
+#start {
+    background-image: url(../../media/genshin/wallpaper2.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+
+#genshinHeader h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(255,255,255, 80%);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0, 50%);
+
+    animation-duration: 8s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes slidein {
+    0% {
+        margin-left: 0%;
+    }
+
+    50% {
+        margin-left: 25px;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+
+#musiclink {
+    font-size: 13px;
+}
+
+#musiclink:hover {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+
+#genshinLogo2 {
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 30%;
+}
+
+
+.aboutGenshinHeader {
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+
+/*
+.box {
+    text-align: center;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255, 30%);
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+}
+*/
+
+
+/*For blur effect*/
+.blurBox, .transparent, #formSection {
+    padding: 50px 0;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0, .5);
+    background: inherit;
+    position: relative;
+    /*margin-bottom: 100px;*/
+}
+
+
+/*For blur effect*/
+.blurBox:before, #start:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 2000px rgba(255,255,255, .5);
+    filter: blur(10px);
+}
+
+
+.blackSection {
+    /*margin: 100px 0;*/
+    background-color: rgb(0, 0, 0, 80%);
+}
+
+.blackSection > h2 { /*Register Now*/
+    color: rgb(255, 255, 255, 90%);
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#paimon {
+    margin: auto;
+    min-height: 400px;
+    min-width: 400px;
+    width: 70%;
+    display: block;
+    top: 50%;
+    position: relative;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#genshinIntro {
+    padding-bottom: 100px;
+}
+
+#formSection {
+    height: 100%;
+    /*margin: 100px 0;*/
+}
+
+#formSection h2 {
+    text-align: center;
+}
+
+
+
+/*table css*/
+
+#tablebutton2 {
+    text-align: center;
+}
+
+#showtable {
+    margin-right: 10px;
+}
+
+#reactionTable {
+    display: none;
+    margin: auto;
+}
+
+table {
+    color: rgb(255,255,255,90%);
+    font-weight: 100;
+}
+
+#tableh4, #tableh5 {
+    text-align: center;
+    color: rgb(255, 255, 255, 90%)
+}
+
+
+
+
+#anemo {
+    background-color: rgb(35, 220, 46, 35%)
+}
+
+#fire {
+    background-color: rgb(249, 88, 13, 35%)
+}
+
+#cryo {
+    background-color: rgb(11, 248, 227, 40%)
+}
+
+#electro {
+    background-color: rgb(97, 2, 249, 30%)
+}
+
+#hydro {
+    background-color: rgb(9, 67, 235, 30%)
+}
+
+#geo {
+    background-color: rgb(254, 201, 9, 30%)
+}
+
+table > caption {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+
+table > caption > p {
+    font-size: 0.7rem;
+}
+
+.tableRow {
+    width: 150px;
+    text-align: center;
+}
+
+
+.tableHeader {
+    width: 200px;
+    text-align: center;
+}
+
+/*pulsing button*/
+.live:hover {
+    background-color: #ffffff;
+    animation: pulse 1500ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: #ffffff 0 0 0 0;
+    }
+
+    75% {
+        box-shadow: #ffffff00 0 0 0 16px;
+    }
+}
+
+/*carousel css*/
+.carousel-inner img {
+    display: block;
+    max-width: 70%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+
+.carousel-control-prev {
+    left: 5%;
+}
+
+.carousel-control-next {
+    right: 5%;
+}
+
+#gallery-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/*form css*/
+form > h1, form > h2 {
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: rgb(23, 15, 7, 85%);
+}
+
+label {
+    padding-top: 10px;
+    display: inline-block;
+    width: 125px;
+}
+
+#favchar {
+    margin: 25px;
+    width: 60%;
+    border-radius: 5px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../../media/genshin/paimon.jpg) 96% / 10% no-repeat #EEE;
+}
+
+
+input {
+    border-radius: 5px;
+}
+
+#errorMsg {
+    color: red;
+    font-weight: bold;
+}
+
+#blackBox {
+    background-color: rgb(0, 0, 0, 50%);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.rainbow {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+/*reference: https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css */
+
+
+
+#registerNowframe {
+    display: block;
+    border: 10px solid;
+    border-color: rgb(255, 255, 255, 50%);
+    border-radius: 25px;
+    height: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+fieldset {
+    border: 2px black solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-size: 1.3rem;
+}

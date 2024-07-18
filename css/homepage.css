@@ -1,0 +1,96 @@
+﻿body {
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Dosis', sans-serif !important;
+    background-color: rgb(0, 0, 0);
+}
+
+#myVideo {
+    position: fixed;
+    width: 100%;
+    height: auto;
+}
+
+#columns{
+    margin: 50px 0;
+}
+
+h3 {
+    padding-top: 50px;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+#aboutCGCol {
+    background-image: url("../media/about/online-game-svgrepo-com.svg");
+    /*image source: https://www.svgrepo.com/svg/9577/online-game */
+    background-color: white;
+    background-size: 100% 500px;
+}
+
+#genshinCol {
+    background-image: url("../media/genshin/genshinMobile.jpg");
+    background-size: 100% 500px;
+}
+
+#csgoCol {
+    background-image: url("../media/csgo/csgo-vert-banner.png");
+    background-size: 100% 500px;
+}
+
+#lolCol{
+    background-image: url("../media/league/yordle.jpg");
+    background-size: 100% 500px;
+}
+
+#leagueheader{
+    color: white;
+}
+
+.infoColumn {
+    border-radius: 30px;
+    margin: 0 50px;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-out;
+    opacity: 0.5;
+}
+
+.contain {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+
+.learnMore {
+    padding: 5px;
+    margin: auto;
+    background-color: rgb(255, 122, 89);
+    border: 2px black solid;
+    border-radius: 10px;
+    color: black;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+.learnMore:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
